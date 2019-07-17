@@ -7,8 +7,11 @@ describe('Split Array function', function() {
   });
 });
 
-xdescribe('Merge function', function() {
+describe('Merge function', function() {
   it('is able to merge two sorted arrays into one sorted array', function() {
-    // test the merging algorithm
+  expect(merge([1, 2], [3, 4]).length).toBe(4)
   });
+  it('is able to merge two sorted arrays into one sorted array(loose val check', function() {
+    expect(merge([1, 2], [3, 4]).join('')).toBe('1234')
+  })
 });
