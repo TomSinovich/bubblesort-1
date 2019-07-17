@@ -25,7 +25,7 @@ function swap(thing1, thing2) {
 }
 
 function bubbleSort(array, lengthOfArray) {
-  console.log('length of array', lengthOfArray)
+  console.log('length of array', lengthOfArray);
   if (lengthOfArray <= 1) {
     return array;
   }
@@ -34,6 +34,5 @@ function bubbleSort(array, lengthOfArray) {
       [array[i], array[i + 1]] = [array[i + 1], array[i]];
     }
   }
-  console.log('array', array)
-  return bubbleSort(array, lengthOfArray - 1)
+  return bubbleSort(array, lengthOfArray - 1);
 }
