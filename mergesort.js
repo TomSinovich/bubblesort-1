@@ -1,12 +1,11 @@
 function split(wholeArray) {
-
   if (wholeArray.length <= 1) {
     return wholeArray;
   } else {
     const middle = Math.floor(wholeArray.length / 2);
     let firstHalf = wholeArray.slice(0, middle);
     let secondHalf = wholeArray.slice(middle);
-    return merge([(split(firstHalf)), (split(secondHalf))]);
+    return [firstHalf, (secondHalf)];
   }
 }
 
@@ -32,11 +31,10 @@ function merge([array1, array2]) {
 
 function mergeSort(array) {
   if (array.length <= 1) {
-    return array
-  } else {
-    return split(array)
+    return array;
   }
-
+    const [left, right] = split(array)
+    return merge([mergeSort(left), mergeSort(right)]);
 }
 
 console.log(
